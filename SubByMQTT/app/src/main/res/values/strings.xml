@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SubByMQTT</string>
+    <string name="title_activity_maps">.MapsActivity</string>
+    <string name="Map_API_Key" templateMergeStrategy="preserve" translatable="false">AIzaSyB4XDU_KLkUhL_d4TeolJeh01jsAc0ODyQ</string>
+</resources>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_ground"
+    tools:context=".Add_Device">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="250dp">
+        <EditText
+            android:id="@+id/edt_IDVih"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/lavender_border"
+            android:inputType="text"
+            android:hint="Enter Vehicles ID"
+            android:padding="10dp"
+            android:maxLength="100" />
+
+
+        <EditText
+            android:id="@+id/edt_PhoneOfSim"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/lavender_border"
+            android:inputType="text"
+            android:hint="Enter Vehicles ID"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:maxLength="100" />
+
+        <EditText
+            android:id="@+id/edt_ActiveSim"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/lavender_border"
+            android:inputType="text"
+            android:hint="Enter Vehicles ID"
+            android:padding="10dp"
+            android:maxLength="100" />
+        <Button
+            android:id="@+id/btn_addVehicles"
+            android:layout_width="380dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_button_signin"
+            android:text="Add Device"
+            />
+
+        <Button
+            android:id="@+id/ScanQRCode"
+            android:layout_width="380dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custom_button_signin"
+            android:layout_height="match_parent"
+            android:text="QR Code" />
+    </LinearLayout>
+
+</ScrollView>
