@@ -29,9 +29,9 @@ public class MQTTHelper extends AppCompatActivity {
 
     public MqttAndroidClient mqttAndroidClient;
 
-    final String clientId = "ductran143 ";
-    final String username = "ductran143";
-    final String password = "aio_RZJk91JHEtENAre4WuApti2yrjo9";//thay doi
+    final String clientId = "Your Cliend ID";
+    final String username = "Your Username";
+    final String password = "Your Adafruits API Key";//thay doi
 
     final String serverUri = "tcp://io.adafruit.com:1883";//thay doi
 
