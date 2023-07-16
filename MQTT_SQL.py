@@ -3,8 +3,8 @@ import pyodbc
 import time
 
 def write_to_sql_server(data):
-    # Kết nối tới SQL Server
-    connection_string = 'DRIVER={SQL Server};SERVER=DESKTOP-T3OUPQ2\HARUUU;DATABASE=Tracking;UID=sa;PWD=1'
+    #Connect to SQL Server
+    connection_string = 'DRIVER={SQL Server};SERVER=[Your Server Name];DATABASE=[Your DB Name];UID=[Your UserID];PWD=[Your Password]'
     connection = pyodbc.connect(connection_string)
     cursor = connection.cursor()
 
@@ -12,22 +12,21 @@ def write_to_sql_server(data):
     data2 = data.split(",")[1]
     timestamp = data.split(",")[2]
     
-    
-    # Thực hiện câu truy vấn để ghi dữ liệu vào SQL Server
+
     if(check_last_timestamp()!= timestamp):
         print(check_last_timestamp()+" "+timestamp)
         query = "INSERT INTO Data (Latitude, Longitude,Timestamp) VALUES (?, ?,?)"
-        cursor.execute(query, (data1,data2,timestamp))  # Giả sử dữ liệu có 2 cột
+        cursor.execute(query, (data1,data2,timestamp)) 
         
 
-    # Lưu thay đổi và đóng kết nối
+    # Save and Change then Close the connect
     connection.commit()
     connection.close()
     
     
     
 def check_last_timestamp():
-    connection_string = 'DRIVER={SQL Server};SERVER=DESKTOP-T3OUPQ2\HARUUU;DATABASE=Tracking;UID=sa;PWD=1'
+    connection_string = 'DRIVER={SQL Server};SERVER=[Your Server Name];DATABASE=[Your DB Name];UID=[Your UserID];PWD=[Your Password]'
     connection = pyodbc.connect(connection_string)
     cursor = connection.cursor()
     
@@ -42,12 +41,12 @@ def check_last_timestamp():
     
     
     
-# Kết nối tới Adafruit MQTT
+# Connect to Adafruit MQTT
 ADAFRUIT_IO_USERNAME = 'ductran143'
 ADAFRUIT_IO_KEY = 'aio_RZJk91JHEtENAre4WuApti2yrjo9'
 aio = Client(ADAFRUIT_IO_USERNAME, ADAFRUIT_IO_KEY)
 
-# Lấy dữ liệu từ Adafruit MQTT và ghi vào SQL Server
+# Take data from adafruits and write to your DB
 while(True):
     feed_name = 'device2'
     data = aio.receive(feed_name)
