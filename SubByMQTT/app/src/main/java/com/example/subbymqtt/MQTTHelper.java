@@ -23,13 +23,11 @@ public class MQTTHelper {
     public MqttAndroidClient mqttAndroidClient;
     int Topic_Index = -1;
     int successCount = 0;
-    final String clientId = "ductran143";
+    final String clientId = "Your Cliend ID";
     int device_topic;
-    final String username = "ductran143";
-    final String Topic[] = {"ductran143/feeds/device1","ductran143/feeds/device2","ductran143/feeds/device3",
-            "ductran143/feeds/device4" + "ductran143/feeds/device5","ductran143/feeds/device6","ductran143/feeds/device7",
-            "ductran143/feeds/device8","ductran143/feeds/device9","ductran143/feeds/device10"};
-    final String password = "aio_RZJk91JHEtENAre4WuApti2yrjo9";
+    final String username = "Your User Name";
+    final String Topic[] = {"Your Device List"};
+    final String password = "Your API Key";
 
     final String serverUri = "tcp://io.adafruit.com:1883";
 
