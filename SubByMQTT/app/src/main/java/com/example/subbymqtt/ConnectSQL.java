@@ -12,7 +12,8 @@ public class ConnectSQL {
 
 
     Connection connection = null;
-    private static String ip = "10.0.0.183", port = "1433", db = "Tracking", username = "sa", password = "1";
+    private static String ip = "Your IP Address", port = "1433", db = "Your DataBase Name", username = "Your UserName", password = "Your Password";
+    //to find your ip address, first go to cmd then write ipconfig in cmd and press enter Your IP Address is IP V4
 
     @SuppressLint("NewAPI")
     public Connection ConnectClass() {
